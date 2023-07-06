@@ -1,0 +1,12 @@
+/* 
+  Localization.strings
+  web3-wallet
+
+  Created by Ramil Rakhmatullin on 05.07.2023.
+  
+*/
+
+"intro.welcome" = "Welcome to Web3 Wallet";
+"intro.description" = "Restore your wallet by entering seed phrase or create a new one.";
+"intro.create" = "Create new";
+"intro.restore" = "Restore";
