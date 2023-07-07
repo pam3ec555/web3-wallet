@@ -15,7 +15,7 @@ struct ContentView: View {
       if authVM.hasSeedPhrase {
         MainScreen()
       } else {
-        LoginScreen()
+        IntroScreen()
       }
     }
       .environmentObject(authVM)

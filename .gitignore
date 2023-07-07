@@ -1,2 +1,3 @@
-*.xcodeproj/
+# Xcode
 DerivedData/
+.DS_Store

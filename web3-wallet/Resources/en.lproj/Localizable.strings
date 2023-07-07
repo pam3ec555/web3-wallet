@@ -6,7 +6,25 @@
   
 */
 
+// Shared
+"shared.continue" = "Continue";
+"shared.textWasCopied" = "Text was copied";
+
+// Shared errors
+"sharedErrors.somethingWentWrong" = "Something went wrong. Please, contact our manager";
+
+// Intro
 "intro.welcome" = "Welcome to Web3 Wallet";
 "intro.description" = "Restore your wallet by entering seed phrase or create a new one.";
 "intro.create" = "Create new";
 "intro.restore" = "Restore";
+
+// Create seed phrase
+"createSeed.title" = "New wallet";
+"createSeed.description" = "Press «Show seed phrase» button to reveal seed phrase of 12 random words. Make sure that no one sees it.";
+"createSeed.showSeedPhrase" = "Show seed phrase";
+"createSeed.yourSeedPhrase" = "Your seed phrase:";
+"createSeed.writeDownSeedPhraseNote" = "Write it down on paper. It is not recommended to save the phrase on your electronic devices or on the internet.";
+"createSeed.enterSeedPhrase" = "Enter seed phrase to confirm that you have saved it.";
+"createSeed.seedPhraseLabel" = "Seed phrase";
+"createSeed.invalidSeedPhrase" = "Invalid seed phrase";

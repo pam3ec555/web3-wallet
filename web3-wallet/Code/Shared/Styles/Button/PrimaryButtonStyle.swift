@@ -1,5 +1,5 @@
 //
-//  TextButton.swift
+//  PrimaryButton.swift
 //  web3-wallet
 //
 //  Created by Ramil Rakhmatullin on 05.07.2023.
@@ -7,19 +7,23 @@
 
 import SwiftUI
 
-struct TextButton: ButtonStyle {
+struct PrimaryButtonStyle: ButtonStyle {
   func makeBody(configuration: Configuration) -> some View {
     configuration.label
-      .foregroundColor(Color.blue)
-      .opacity(configuration.isPressed ? 0.6 : 1)
+      .frame(maxWidth: .infinity)
+      .foregroundColor(.white)
+      .padding()
+      .background(Color.blue)
+      .cornerRadius(8)
+      .opacity(configuration.isPressed ? 0.8 : 1)
       .animation(.easeInOut(duration: 0.1), value: configuration.isPressed)
   }
 }
 
-struct TextButton_Previews: PreviewProvider {
+struct PrimaryButton_Previews: PreviewProvider {
   static var previews: some View {
     Button(action: {}) {
       Text("Text")
-    }.buttonStyle(TextButton())
+    }.buttonStyle(PrimaryButtonStyle())
   }
 }
