@@ -23,7 +23,9 @@ struct ConfirmNewSeedPhraseScreen: View {
       Spacer()
       TextField("createSeed.seedPhraseLabel", text: $text)
         .textFieldStyle(RoundedBorderTextFieldStyle())
-        .lineLimit(3)
+        .onChange(of: text) { value in
+          fieldErrorText = nil
+        }
       if fieldErrorText != nil {
         Text(fieldErrorText ?? "").foregroundColor(.red)
       }

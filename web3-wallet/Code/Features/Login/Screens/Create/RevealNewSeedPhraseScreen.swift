@@ -9,8 +9,10 @@ import SwiftUI
 import Bip39
 
 struct RevealNewSeedPhraseScreen: View {
-  @State private var isCopied = false
+  @Environment(\.presentationMode) var presentationMode
 
+  @State private var isCopied = false
+  
   private let seedPhrase: String
   
   init() {
@@ -42,7 +44,17 @@ struct RevealNewSeedPhraseScreen: View {
           Spacer()
         }
       }
+      .navigationBarBackButtonHidden(true)
+      .navigationBarItems(leading: backButton)
     }
+  }
+  
+  var backButton: some View {
+    Button(action: {
+      self.presentationMode.wrappedValue.dismiss()
+    }) {
+      Text("shared.close")
+    }.buttonStyle(TextButtonStyle())
   }
 }
 

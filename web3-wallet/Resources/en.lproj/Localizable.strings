@@ -8,6 +8,7 @@
 
 // Shared
 "shared.continue" = "Continue";
+"shared.close" = "Close";
 "shared.textWasCopied" = "Text was copied";
 
 // Shared errors
@@ -28,3 +29,9 @@
 "createSeed.enterSeedPhrase" = "Enter seed phrase to confirm that you have saved it.";
 "createSeed.seedPhraseLabel" = "Seed phrase";
 "createSeed.invalidSeedPhrase" = "Invalid seed phrase";
+
+// Restore seed phrase
+"restoreSeed.title" = "Restore";
+"restoreSeed.seedPhraseLabel" = "Seed phrase";
+"restoreSeed.description" = "Enter a 12 words seed phrase from your existing wallet.";
+"restoreSeed.invalidSeedPhraseFormat" = "Invalid format of seed phrase";
