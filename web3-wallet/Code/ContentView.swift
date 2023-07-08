@@ -18,8 +18,8 @@ struct ContentView: View {
         IntroScreen()
       }
     }
-      .environmentObject(authVM)
-      .environment(\.locale, .init(identifier: "en"))
+    .environmentObject(authVM)
+    .environment(\.locale, .init(identifier: "en"))
   }
 }
 

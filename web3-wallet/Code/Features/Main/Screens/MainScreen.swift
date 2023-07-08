@@ -8,13 +8,24 @@
 import SwiftUI
 
 struct MainScreen: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+  var body: some View {
+    TabView {
+      WalletScreen()
+        .tabItem {
+          Image(systemName: "bitcoinsign.circle")
+          Text("wallet.title")
+        }
+      SettingsScreen()
+        .tabItem {
+          Image(systemName: "gear")
+          Text("settings.title")
+        }
     }
+  }
 }
 
 struct MainScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        MainScreen()
-    }
+  static var previews: some View {
+    MainScreen()
+  }
 }

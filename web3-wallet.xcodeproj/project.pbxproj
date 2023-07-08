@@ -24,6 +24,8 @@
 		3030E1642A56AD70008B469E /* CodeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3030E1632A56AD70008B469E /* CodeText.swift */; };
 		3030E1682A56B026008B469E /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = 3030E1672A56B026008B469E /* PopupView */; };
 		3030E16E2A56CF13008B469E /* PopupModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3030E16D2A56CF13008B469E /* PopupModifiers.swift */; };
+		3030E1722A5912E4008B469E /* WalletScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3030E1712A5912E4008B469E /* WalletScreen.swift */; };
+		3030E1762A59132F008B469E /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3030E1752A59132F008B469E /* SettingsScreen.swift */; };
 		30A74E6A2A516D6400A9FC55 /* web3_walletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A74E692A516D6400A9FC55 /* web3_walletApp.swift */; };
 		30A74E6C2A516D6400A9FC55 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A74E6B2A516D6400A9FC55 /* ContentView.swift */; };
 		30A74E6E2A516D6500A9FC55 /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30A74E6D2A516D6500A9FC55 /* AppIcon.xcassets */; };
@@ -45,6 +47,8 @@
 		3030E15F2A5682F9008B469E /* ConfirmNewSeedPhraseScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmNewSeedPhraseScreen.swift; sourceTree = "<group>"; };
 		3030E1632A56AD70008B469E /* CodeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CodeText.swift; path = "web3-wallet/Code/Features/Login/Screens/Create/CodeText.swift"; sourceTree = SOURCE_ROOT; };
 		3030E16D2A56CF13008B469E /* PopupModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupModifiers.swift; sourceTree = "<group>"; };
+		3030E1712A5912E4008B469E /* WalletScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletScreen.swift; sourceTree = "<group>"; };
+		3030E1752A59132F008B469E /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
 		30A74E662A516D6400A9FC55 /* web3-wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "web3-wallet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30A74E692A516D6400A9FC55 /* web3_walletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = web3_walletApp.swift; sourceTree = "<group>"; };
 		30A74E6B2A516D6400A9FC55 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -79,6 +83,8 @@
 		3030E1252A552CC7008B469E /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				3030E1732A591317008B469E /* Settings */,
+				3030E16F2A5912C2008B469E /* Wallet */,
 				3030E1302A557BE9008B469E /* Main */,
 				3030E12C2A557BB8008B469E /* Login */,
 				3030E1272A552D59008B469E /* Auth */,
@@ -224,6 +230,38 @@
 			path = Modifiers;
 			sourceTree = "<group>";
 		};
+		3030E16F2A5912C2008B469E /* Wallet */ = {
+			isa = PBXGroup;
+			children = (
+				3030E1702A5912D0008B469E /* Screens */,
+			);
+			path = Wallet;
+			sourceTree = "<group>";
+		};
+		3030E1702A5912D0008B469E /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				3030E1712A5912E4008B469E /* WalletScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		3030E1732A591317008B469E /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				3030E1742A591320008B469E /* Screens */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		3030E1742A591320008B469E /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				3030E1752A59132F008B469E /* SettingsScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
 		30A74E5D2A516D6400A9FC55 = {
 			isa = PBXGroup;
 			children = (
@@ -331,9 +369,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3030E1762A59132F008B469E /* SettingsScreen.swift in Sources */,
 				3030E12B2A552E25008B469E /* AuthVM.swift in Sources */,
 				3030E1382A5598B1008B469E /* IntroScreen.swift in Sources */,
 				3030E15B2A567A6D008B469E /* RevealNewSeedPhraseScreen.swift in Sources */,
+				3030E1722A5912E4008B469E /* WalletScreen.swift in Sources */,
 				3030E1532A55B09A008B469E /* RestoreSeedPhraseScreen.swift in Sources */,
 				3030E1332A557C31008B469E /* MainScreen.swift in Sources */,
 				3030E1642A56AD70008B469E /* CodeText.swift in Sources */,
