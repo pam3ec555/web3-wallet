@@ -8,7 +8,7 @@
 import SwiftUI
 import Bip39
 
-struct RevealNewSeedPhraseScreen: View {
+struct RevealNewMnemonicScreen: View {
   @Environment(\.presentationMode) var presentationMode
 
   @State private var isCopied = false
@@ -31,7 +31,7 @@ struct RevealNewSeedPhraseScreen: View {
         }
         Spacer()
         NavigationLink {
-          ConfirmNewSeedPhraseScreen(seedPhrase)
+          ConfirmNewMnemonicScreen(seedPhrase)
         } label: {
           Text("shared.continue")
         }.buttonStyle(PrimaryButtonStyle())
@@ -60,6 +60,6 @@ struct RevealNewSeedPhraseScreen: View {
 
 struct RevealNewSeedPhraseScreen_Previews: PreviewProvider {
   static var previews: some View {
-    RevealNewSeedPhraseScreen()
+    RevealNewMnemonicScreen()
   }
 }

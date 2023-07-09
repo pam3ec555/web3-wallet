@@ -6,31 +6,74 @@
 //
 
 import Foundation
+import Web3Core
+
+enum AuthorizationError: Error {
+  case unknown
+  case mnemonicDoesNotExist
+  case invalidPassword
+}
 
 class AuthVM: ObservableObject {
-  @Published var hasSeedPhrase: Bool = false
+  @Published private(set) var mnemonic: String?
+  @Published private(set) var keystore: BIP32Keystore?
+  
+  var hasMnemonic: Bool {
+    get {
+      mnemonic != nil
+    }
+  }
+  
+  var isAuthorized: Bool {
+    get {
+      keystore != nil
+    }
+  }
   
   let repository: AuthRepository
   
   init(repository: AuthRepository) {
     self.repository = repository
-    let initialSeedPhrase = repository.retreiveSeedPhrase()
-    hasSeedPhrase = initialSeedPhrase != nil
+    mnemonic = repository.retreiveMnemonic()
   }
   
-  func storeSeedPhrase(seedPhrase: String) -> Bool {
-    let isStored = repository.storeSeedPhrase(seedPhrase)
+  func authorize(_ password: String) throws {
+    guard let unwrappedMnemonic = mnemonic else {
+      throw AuthorizationError.mnemonicDoesNotExist
+    }
+    let passwordIsValid = repository.validatePassword(with: password)
+    if !passwordIsValid {
+      throw AuthorizationError.invalidPassword
+    }
+    do {
+      keystore = try BIP32Keystore(
+        mnemonics: unwrappedMnemonic,
+        password: password
+      )
+      print("Address = \(keystore?.addresses?.first)")
+    } catch {
+      throw AuthorizationError.unknown
+    }
+  }
+  
+  func storeMnemonic(_ newMnemonic: String) -> Bool {
+    let isStored = repository.storeMnemonic(newMnemonic)
     if isStored {
-      hasSeedPhrase = true
+      mnemonic = newMnemonic
     }
     return isStored
   }
   
-  func retrieveSeedPhrase() -> String? {
-    return repository.retreiveSeedPhrase()
+  func retrieveMnemonic() -> String? {
+    return repository.retreiveMnemonic()
   }
   
-  func clearSeedPhrase() -> Bool {
-    return repository.clearSeedPhrase()
+  func clear() -> Bool {
+    let isCleared = repository.clearMnemonic()
+    if (isCleared) {
+      mnemonic = nil
+      keystore = nil
+    }
+    return isCleared
   }
 }

@@ -18,12 +18,12 @@ struct IntroScreen: View {
         Spacer()
         VStack(spacing: 20) {
           NavigationLink() {
-            CreateSeedPhraseScreen()
+            CreateMnemonicScreen()
           } label: {
             Text("intro.create")
           }.buttonStyle(PrimaryButtonStyle())
           NavigationLink() {
-            RestoreSeedPhraseScreen()
+            RestoreMnemonicScreen()
           } label: {
             Text("intro.restore")
           }

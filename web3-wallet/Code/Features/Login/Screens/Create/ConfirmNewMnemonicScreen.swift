@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ConfirmNewSeedPhraseScreen: View {
+struct ConfirmNewMnemonicScreen: View {
   let seedPhrase: String
 
   @State private var text: String = ""
@@ -26,14 +26,14 @@ struct ConfirmNewSeedPhraseScreen: View {
         .onChange(of: text) { value in
           fieldErrorText = nil
         }
-      if fieldErrorText != nil {
-        Text(fieldErrorText ?? "").foregroundColor(.red)
+      if let errorText = fieldErrorText {
+        Text(errorText).foregroundColor(.red)
       }
       Text("createSeed.enterSeedPhrase").font(.footnote)
       Spacer()
       Button(action: {
         if (text == seedPhrase) {
-          let isStored = authVM.storeSeedPhrase(seedPhrase: seedPhrase)
+          let isStored = authVM.storeMnemonic(seedPhrase)
           if (!isStored) {
             fieldErrorText = "sharedErrors.somethingWentWrong"
           }
@@ -49,6 +49,6 @@ struct ConfirmNewSeedPhraseScreen: View {
 
 struct ConfirmNewSeedPhraseScreen_Previews: PreviewProvider {
   static var previews: some View {
-    ConfirmNewSeedPhraseScreen("")
+    ConfirmNewMnemonicScreen("")
   }
 }

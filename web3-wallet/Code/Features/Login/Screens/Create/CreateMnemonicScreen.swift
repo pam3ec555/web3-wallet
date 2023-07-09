@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CreateSeedPhraseScreen: View {
+struct CreateMnemonicScreen: View {
   @State private var isShowingSeed = false
 
   var body: some View {
@@ -22,7 +22,7 @@ struct CreateSeedPhraseScreen: View {
       }
         .buttonStyle(PrimaryButtonStyle())
         .sheet(isPresented: $isShowingSeed) {
-          RevealNewSeedPhraseScreen()
+          RevealNewMnemonicScreen()
         }
     }
       .padding()
@@ -32,6 +32,6 @@ struct CreateSeedPhraseScreen: View {
 
 struct CreateSeedPhraseScreen_Previews: PreviewProvider {
   static var previews: some View {
-    CreateSeedPhraseScreen()
+    CreateMnemonicScreen()
   }
 }

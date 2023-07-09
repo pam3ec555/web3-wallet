@@ -1,12 +1,30 @@
 {
   "pins" : [
     {
+      "identity" : "bigint",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/attaswift/BigInt.git",
+      "state" : {
+        "revision" : "0ed110f7555c34ff468e72e1686e59721f2b0da6",
+        "version" : "5.3.0"
+      }
+    },
+    {
       "identity" : "bip39.swift",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/tesseract-one/Bip39.swift.git",
       "state" : {
         "revision" : "ac728b82520e93a17deb1c2af2c9c952274db703",
         "version" : "0.1.1"
+      }
+    },
+    {
+      "identity" : "cryptoswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/krzyzanowskim/CryptoSwift.git",
+      "state" : {
+        "revision" : "039f56c5d7960f277087a0be51f5eb04ed0ec073",
+        "version" : "1.5.1"
       }
     },
     {
@@ -25,6 +43,15 @@
       "state" : {
         "revision" : "e089407582e1f2d81dc11ba167362742422b8979",
         "version" : "0.1.3"
+      }
+    },
+    {
+      "identity" : "web3swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/web3swift-team/web3swift.git",
+      "state" : {
+        "revision" : "16a2915ebd1a0fd33bf0a0ed5a9874909a6e187d",
+        "version" : "3.1.2"
       }
     }
   ],

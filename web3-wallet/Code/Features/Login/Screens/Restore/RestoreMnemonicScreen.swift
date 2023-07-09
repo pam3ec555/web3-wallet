@@ -8,7 +8,7 @@
 import SwiftUI
 import Bip39
 
-struct RestoreSeedPhraseScreen: View {
+struct RestoreMnemonicScreen: View {
   @State private var text: String = ""
   @State private var fieldErrorText: LocalizedStringKey? = nil
   @EnvironmentObject private var authVM: AuthVM
@@ -21,15 +21,15 @@ struct RestoreSeedPhraseScreen: View {
         .onChange(of: text) { value in
           fieldErrorText = nil
         }
-      if fieldErrorText != nil {
-        Text(fieldErrorText ?? "").foregroundColor(.red)
+      if let errorText = fieldErrorText {
+        Text(errorText).foregroundColor(.red)
       }
       Text("restoreSeed.description").font(.footnote)
       Spacer()
       Button(action: {
         let phrase = text.trimmingCharacters(in: .whitespacesAndNewlines)
         if Mnemonic.isValid(phrase: phrase.components(separatedBy: " ")) {
-          let isStored = authVM.storeSeedPhrase(seedPhrase: phrase)
+          let isStored = authVM.storeMnemonic(phrase)
           if (!isStored) {
             fieldErrorText = "sharedErrors.somethingWentWrong"
           }
@@ -45,6 +45,6 @@ struct RestoreSeedPhraseScreen: View {
 
 struct RestoreSeedPhraseScreen_Previews: PreviewProvider {
   static var previews: some View {
-    RestoreSeedPhraseScreen()
+    RestoreMnemonicScreen()
   }
 }

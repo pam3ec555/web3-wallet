@@ -15,17 +15,27 @@
 		3030E1422A559C89008B469E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3030E1412A559C89008B469E /* Colors.xcassets */; };
 		3030E14B2A55A474008B469E /* PrimaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3030E14A2A55A474008B469E /* PrimaryButtonStyle.swift */; };
 		3030E14D2A55A688008B469E /* TextButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3030E14C2A55A688008B469E /* TextButtonStyle.swift */; };
-		3030E1512A55ACA6008B469E /* CreateSeedPhraseScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3030E1502A55ACA6008B469E /* CreateSeedPhraseScreen.swift */; };
-		3030E1532A55B09A008B469E /* RestoreSeedPhraseScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3030E1522A55B09A008B469E /* RestoreSeedPhraseScreen.swift */; };
+		3030E1512A55ACA6008B469E /* CreateMnemonicScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3030E1502A55ACA6008B469E /* CreateMnemonicScreen.swift */; };
+		3030E1532A55B09A008B469E /* RestoreMnemonicScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3030E1522A55B09A008B469E /* RestoreMnemonicScreen.swift */; };
 		3030E1572A566727008B469E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 3030E1562A566727008B469E /* .gitignore */; };
-		3030E15B2A567A6D008B469E /* RevealNewSeedPhraseScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3030E15A2A567A6D008B469E /* RevealNewSeedPhraseScreen.swift */; };
+		3030E15B2A567A6D008B469E /* RevealNewMnemonicScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3030E15A2A567A6D008B469E /* RevealNewMnemonicScreen.swift */; };
 		3030E15E2A567EAB008B469E /* Bip39 in Frameworks */ = {isa = PBXBuildFile; productRef = 3030E15D2A567EAB008B469E /* Bip39 */; };
-		3030E1602A5682F9008B469E /* ConfirmNewSeedPhraseScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3030E15F2A5682F9008B469E /* ConfirmNewSeedPhraseScreen.swift */; };
+		3030E1602A5682F9008B469E /* ConfirmNewMnemonicScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3030E15F2A5682F9008B469E /* ConfirmNewMnemonicScreen.swift */; };
 		3030E1642A56AD70008B469E /* CodeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3030E1632A56AD70008B469E /* CodeText.swift */; };
 		3030E1682A56B026008B469E /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = 3030E1672A56B026008B469E /* PopupView */; };
 		3030E16E2A56CF13008B469E /* PopupModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3030E16D2A56CF13008B469E /* PopupModifiers.swift */; };
 		3030E1722A5912E4008B469E /* WalletScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3030E1712A5912E4008B469E /* WalletScreen.swift */; };
 		3030E1762A59132F008B469E /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3030E1752A59132F008B469E /* SettingsScreen.swift */; };
+		3030E17B2A592A65008B469E /* WalletVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3030E17A2A592A65008B469E /* WalletVM.swift */; };
+		3030E1802A592B21008B469E /* AssetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3030E17F2A592B21008B469E /* AssetModel.swift */; };
+		3030E1862A59371D008B469E /* WalletRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3030E1852A59371D008B469E /* WalletRepository.swift */; };
+		3030E18F2A5968C9008B469E /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3030E18E2A5968C9008B469E /* Configuration.plist */; };
+		3030E1912A59696C008B469E /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3030E1902A59696C008B469E /* AppConfiguration.swift */; };
+		3030E19A2A599196008B469E /* web3swift in Frameworks */ = {isa = PBXBuildFile; productRef = 3030E1992A599196008B469E /* web3swift */; };
+		3030E19D2A5A8231008B469E /* AuthorizeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3030E19C2A5A8231008B469E /* AuthorizeScreen.swift */; };
+		3030E1A62A5A9031008B469E /* PinCodeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3030E1A52A5A9031008B469E /* PinCodeTextField.swift */; };
+		3030E1AA2A5ABD38008B469E /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3030E1A92A5ABD38008B469E /* AppError.swift */; };
+		3030E1AC2A5AC67C008B469E /* ShakeAnimModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3030E1AB2A5AC67C008B469E /* ShakeAnimModifier.swift */; };
 		30A74E6A2A516D6400A9FC55 /* web3_walletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A74E692A516D6400A9FC55 /* web3_walletApp.swift */; };
 		30A74E6C2A516D6400A9FC55 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A74E6B2A516D6400A9FC55 /* ContentView.swift */; };
 		30A74E6E2A516D6500A9FC55 /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30A74E6D2A516D6500A9FC55 /* AppIcon.xcassets */; };
@@ -40,15 +50,24 @@
 		3030E1412A559C89008B469E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		3030E14A2A55A474008B469E /* PrimaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonStyle.swift; sourceTree = "<group>"; };
 		3030E14C2A55A688008B469E /* TextButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButtonStyle.swift; sourceTree = "<group>"; };
-		3030E1502A55ACA6008B469E /* CreateSeedPhraseScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSeedPhraseScreen.swift; sourceTree = "<group>"; };
-		3030E1522A55B09A008B469E /* RestoreSeedPhraseScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoreSeedPhraseScreen.swift; sourceTree = "<group>"; };
+		3030E1502A55ACA6008B469E /* CreateMnemonicScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMnemonicScreen.swift; sourceTree = "<group>"; };
+		3030E1522A55B09A008B469E /* RestoreMnemonicScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoreMnemonicScreen.swift; sourceTree = "<group>"; };
 		3030E1562A566727008B469E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		3030E15A2A567A6D008B469E /* RevealNewSeedPhraseScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevealNewSeedPhraseScreen.swift; sourceTree = "<group>"; };
-		3030E15F2A5682F9008B469E /* ConfirmNewSeedPhraseScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmNewSeedPhraseScreen.swift; sourceTree = "<group>"; };
+		3030E15A2A567A6D008B469E /* RevealNewMnemonicScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevealNewMnemonicScreen.swift; sourceTree = "<group>"; };
+		3030E15F2A5682F9008B469E /* ConfirmNewMnemonicScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmNewMnemonicScreen.swift; sourceTree = "<group>"; };
 		3030E1632A56AD70008B469E /* CodeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CodeText.swift; path = "web3-wallet/Code/Features/Login/Screens/Create/CodeText.swift"; sourceTree = SOURCE_ROOT; };
 		3030E16D2A56CF13008B469E /* PopupModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupModifiers.swift; sourceTree = "<group>"; };
 		3030E1712A5912E4008B469E /* WalletScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletScreen.swift; sourceTree = "<group>"; };
 		3030E1752A59132F008B469E /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
+		3030E17A2A592A65008B469E /* WalletVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletVM.swift; sourceTree = "<group>"; };
+		3030E17F2A592B21008B469E /* AssetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetModel.swift; sourceTree = "<group>"; };
+		3030E1852A59371D008B469E /* WalletRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletRepository.swift; sourceTree = "<group>"; };
+		3030E18E2A5968C9008B469E /* Configuration.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Configuration.plist; sourceTree = "<group>"; };
+		3030E1902A59696C008B469E /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
+		3030E19C2A5A8231008B469E /* AuthorizeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizeScreen.swift; sourceTree = "<group>"; };
+		3030E1A52A5A9031008B469E /* PinCodeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinCodeTextField.swift; sourceTree = "<group>"; };
+		3030E1A92A5ABD38008B469E /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		3030E1AB2A5AC67C008B469E /* ShakeAnimModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeAnimModifier.swift; sourceTree = "<group>"; };
 		30A74E662A516D6400A9FC55 /* web3-wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "web3-wallet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30A74E692A516D6400A9FC55 /* web3_walletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = web3_walletApp.swift; sourceTree = "<group>"; };
 		30A74E6B2A516D6400A9FC55 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -63,6 +82,7 @@
 			files = (
 				3030E1682A56B026008B469E /* PopupView in Frameworks */,
 				3030E15E2A567EAB008B469E /* Bip39 in Frameworks */,
+				3030E19A2A599196008B469E /* web3swift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +125,7 @@
 		3030E1272A552D59008B469E /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				3030E19B2A5A81FF008B469E /* Screens */,
 				3030E1342A557EBD008B469E /* Repositories */,
 				3030E1292A552DBE008B469E /* ViewModels */,
 			);
@@ -164,6 +185,7 @@
 		3030E1432A55A3A2008B469E /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				3030E1A72A5ABD0A008B469E /* Models */,
 				3030E16C2A56CEFC008B469E /* Modifiers */,
 				3030E1612A56AD05008B469E /* Views */,
 				3030E1482A55A441008B469E /* Styles */,
@@ -191,9 +213,9 @@
 		3030E1582A5679EF008B469E /* Create */ = {
 			isa = PBXGroup;
 			children = (
-				3030E1502A55ACA6008B469E /* CreateSeedPhraseScreen.swift */,
-				3030E15A2A567A6D008B469E /* RevealNewSeedPhraseScreen.swift */,
-				3030E15F2A5682F9008B469E /* ConfirmNewSeedPhraseScreen.swift */,
+				3030E1502A55ACA6008B469E /* CreateMnemonicScreen.swift */,
+				3030E15A2A567A6D008B469E /* RevealNewMnemonicScreen.swift */,
+				3030E15F2A5682F9008B469E /* ConfirmNewMnemonicScreen.swift */,
 			);
 			path = Create;
 			sourceTree = "<group>";
@@ -201,7 +223,7 @@
 		3030E1592A5679F9008B469E /* Restore */ = {
 			isa = PBXGroup;
 			children = (
-				3030E1522A55B09A008B469E /* RestoreSeedPhraseScreen.swift */,
+				3030E1522A55B09A008B469E /* RestoreMnemonicScreen.swift */,
 			);
 			path = Restore;
 			sourceTree = "<group>";
@@ -209,6 +231,7 @@
 		3030E1612A56AD05008B469E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3030E1A22A5A86CA008B469E /* TextField */,
 				3030E1622A56AD42008B469E /* Text */,
 			);
 			path = Views;
@@ -226,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				3030E16D2A56CF13008B469E /* PopupModifiers.swift */,
+				3030E1AB2A5AC67C008B469E /* ShakeAnimModifier.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -233,6 +257,9 @@
 		3030E16F2A5912C2008B469E /* Wallet */ = {
 			isa = PBXGroup;
 			children = (
+				3030E1842A593708008B469E /* Repositories */,
+				3030E17C2A592AF0008B469E /* Models */,
+				3030E1772A592A38008B469E /* ViewModels */,
 				3030E1702A5912D0008B469E /* Screens */,
 			);
 			path = Wallet;
@@ -262,6 +289,71 @@
 			path = Screens;
 			sourceTree = "<group>";
 		};
+		3030E1772A592A38008B469E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				3030E17A2A592A65008B469E /* WalletVM.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		3030E17C2A592AF0008B469E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3030E17F2A592B21008B469E /* AssetModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3030E1842A593708008B469E /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				3030E1852A59371D008B469E /* WalletRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		3030E18D2A5968A3008B469E /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				3030E18E2A5968C9008B469E /* Configuration.plist */,
+				3030E1902A59696C008B469E /* AppConfiguration.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		3030E19B2A5A81FF008B469E /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				3030E19C2A5A8231008B469E /* AuthorizeScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		3030E1A22A5A86CA008B469E /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				3030E1A52A5A9031008B469E /* PinCodeTextField.swift */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
+		3030E1A72A5ABD0A008B469E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3030E1A82A5ABD14008B469E /* Errors */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3030E1A82A5ABD14008B469E /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				3030E1A92A5ABD38008B469E /* AppError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
 		30A74E5D2A516D6400A9FC55 = {
 			isa = PBXGroup;
 			children = (
@@ -282,6 +374,7 @@
 		30A74E682A516D6400A9FC55 /* web3-wallet */ = {
 			isa = PBXGroup;
 			children = (
+				3030E18D2A5968A3008B469E /* Config */,
 				3030E1262A552D15008B469E /* Resources */,
 				3030E1242A552CAA008B469E /* Code */,
 				30A74E6F2A516D6500A9FC55 /* web3_wallet.entitlements */,
@@ -308,6 +401,7 @@
 			packageProductDependencies = (
 				3030E15D2A567EAB008B469E /* Bip39 */,
 				3030E1672A56B026008B469E /* PopupView */,
+				3030E1992A599196008B469E /* web3swift */,
 			);
 			productName = "web3-wallet";
 			productReference = 30A74E662A516D6400A9FC55 /* web3-wallet.app */;
@@ -340,6 +434,7 @@
 			packageReferences = (
 				3030E15C2A567EAB008B469E /* XCRemoteSwiftPackageReference "Bip39.swift" */,
 				3030E1662A56B026008B469E /* XCRemoteSwiftPackageReference "PopupView" */,
+				3030E1982A599196008B469E /* XCRemoteSwiftPackageReference "web3swift" */,
 			);
 			productRefGroup = 30A74E672A516D6400A9FC55 /* Products */;
 			projectDirPath = "";
@@ -356,6 +451,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3030E1572A566727008B469E /* .gitignore in Resources */,
+				3030E18F2A5968C9008B469E /* Configuration.plist in Resources */,
 				3030E1422A559C89008B469E /* Colors.xcassets in Resources */,
 				30A74E6E2A516D6500A9FC55 /* AppIcon.xcassets in Resources */,
 				3030E13E2A559A27008B469E /* Localizable.strings in Resources */,
@@ -372,19 +468,27 @@
 				3030E1762A59132F008B469E /* SettingsScreen.swift in Sources */,
 				3030E12B2A552E25008B469E /* AuthVM.swift in Sources */,
 				3030E1382A5598B1008B469E /* IntroScreen.swift in Sources */,
-				3030E15B2A567A6D008B469E /* RevealNewSeedPhraseScreen.swift in Sources */,
+				3030E15B2A567A6D008B469E /* RevealNewMnemonicScreen.swift in Sources */,
 				3030E1722A5912E4008B469E /* WalletScreen.swift in Sources */,
-				3030E1532A55B09A008B469E /* RestoreSeedPhraseScreen.swift in Sources */,
+				3030E1532A55B09A008B469E /* RestoreMnemonicScreen.swift in Sources */,
+				3030E1912A59696C008B469E /* AppConfiguration.swift in Sources */,
 				3030E1332A557C31008B469E /* MainScreen.swift in Sources */,
 				3030E1642A56AD70008B469E /* CodeText.swift in Sources */,
+				3030E17B2A592A65008B469E /* WalletVM.swift in Sources */,
 				3030E1362A557EE4008B469E /* AuthRepository.swift in Sources */,
 				3030E16E2A56CF13008B469E /* PopupModifiers.swift in Sources */,
-				3030E1602A5682F9008B469E /* ConfirmNewSeedPhraseScreen.swift in Sources */,
+				3030E1602A5682F9008B469E /* ConfirmNewMnemonicScreen.swift in Sources */,
+				3030E1A62A5A9031008B469E /* PinCodeTextField.swift in Sources */,
 				30A74E6C2A516D6400A9FC55 /* ContentView.swift in Sources */,
+				3030E1862A59371D008B469E /* WalletRepository.swift in Sources */,
 				3030E14D2A55A688008B469E /* TextButtonStyle.swift in Sources */,
-				3030E1512A55ACA6008B469E /* CreateSeedPhraseScreen.swift in Sources */,
+				3030E1512A55ACA6008B469E /* CreateMnemonicScreen.swift in Sources */,
+				3030E1AC2A5AC67C008B469E /* ShakeAnimModifier.swift in Sources */,
 				3030E14B2A55A474008B469E /* PrimaryButtonStyle.swift in Sources */,
+				3030E1802A592B21008B469E /* AssetModel.swift in Sources */,
+				3030E1AA2A5ABD38008B469E /* AppError.swift in Sources */,
 				30A74E6A2A516D6400A9FC55 /* web3_walletApp.swift in Sources */,
+				3030E19D2A5A8231008B469E /* AuthorizeScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -627,6 +731,14 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		3030E1982A599196008B469E /* XCRemoteSwiftPackageReference "web3swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/web3swift-team/web3swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -639,6 +751,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3030E1662A56B026008B469E /* XCRemoteSwiftPackageReference "PopupView" */;
 			productName = PopupView;
+		};
+		3030E1992A599196008B469E /* web3swift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3030E1982A599196008B469E /* XCRemoteSwiftPackageReference "web3swift" */;
+			productName = web3swift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

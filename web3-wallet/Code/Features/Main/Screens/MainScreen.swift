@@ -8,13 +8,18 @@
 import SwiftUI
 
 struct MainScreen: View {
+  @EnvironmentObject private var authVM: AuthVM
+  @EnvironmentObject private var appConfig: AppConfiguration
+  
   var body: some View {
-    TabView {
-      WalletScreen()
-        .tabItem {
-          Image(systemName: "bitcoinsign.circle")
-          Text("wallet.title")
-        }
+    return TabView {
+      if let seedPhrase = authVM.mnemonic {
+        WalletScreen(seedPhrase: seedPhrase, rpcURL: appConfig.data.rpcURL)
+          .tabItem {
+            Image(systemName: "bitcoinsign.circle")
+            Text("wallet.title")
+          }
+      }
       SettingsScreen()
         .tabItem {
           Image(systemName: "gear")

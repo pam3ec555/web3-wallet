@@ -9,16 +9,22 @@ import SwiftUI
 
 struct ContentView: View {
   @StateObject private var authVM = AuthVM(repository: AuthRepositoryImpl())
+  @StateObject private var config = AppConfiguration()
   
   var body: some View {
     Group {
-      if authVM.hasSeedPhrase {
-        MainScreen()
+      if authVM.hasMnemonic {
+        if authVM.isAuthorized {
+          MainScreen()
+        } else {
+          AuthorizeScreen()
+        }
       } else {
         IntroScreen()
       }
     }
     .environmentObject(authVM)
+    .environmentObject(config)
     .environment(\.locale, .init(identifier: "en"))
   }
 }
