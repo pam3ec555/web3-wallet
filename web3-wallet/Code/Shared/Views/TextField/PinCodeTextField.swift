@@ -8,12 +8,13 @@
 import SwiftUI
 
 /// Returns error text if some error was occured. Otherwise returns nil
-typealias OnEnterDone = (_ code: String) async throws -> Void
+typealias OnEnterDone = (String, @escaping (AppError?) -> Void) -> Void
 
 struct PinCodeTextField: View {
   @State private var code: String = ""
   @State private var errorText: LocalizedStringKey? = nil
   @State private var isFieldShaking: Bool = false
+  @State private var isSubmitting: Bool = false
   @FocusState private var isTextFieldFocused: Bool
   
   let maxCodeLength = 4
@@ -22,7 +23,11 @@ struct PinCodeTextField: View {
   let isInitiallyFocused: Bool
   let onEnterDone: OnEnterDone
   
-  init(label: LocalizedStringKey, isFocused: Bool = false, onEnterDone: @escaping OnEnterDone) {
+  init(
+    label: LocalizedStringKey,
+    isFocused: Bool = false,
+    onEnterDone: @escaping OnEnterDone
+  ) {
     self.label = label
     self.isInitiallyFocused = isFocused
     self.onEnterDone = onEnterDone
@@ -38,9 +43,13 @@ struct PinCodeTextField: View {
               .font(.title2)
           }
         }.shake($isFieldShaking)
-        Text(errorText ?? "Error")
-          .foregroundColor(.red)
-          .opacity(errorText != nil ? 1 : 0)
+        VStack {
+          if isSubmitting {
+            ProgressView()
+          } else if let unwrappedError = errorText {
+            Text(unwrappedError).foregroundColor(.red)
+          }
+        }.frame(minHeight: 32)
       }
       .padding()
       .contentShape(Rectangle())
@@ -59,6 +68,7 @@ struct PinCodeTextField: View {
             isTextFieldFocused = true
           }
         }
+        .disabled(isSubmitting)
         .onChange(of: code) { newValue in
           if errorText != nil {
             errorText = nil
@@ -69,16 +79,22 @@ struct PinCodeTextField: View {
           } else {
             code = newValue
           }
+          
           if code.count == maxCodeLength {
-            Task {
-              do {
-                let _ = try await onEnterDone(code)
-              } catch AppError.localizedText(let message) {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                  code = ""
-                  isFieldShaking = true
-                  DispatchQueue.main.asyncAfter(deadline: .now()) {
-                    errorText = message
+            DispatchQueue.main.async {
+              isSubmitting = true
+              onEnterDone(code) { error in
+                code = ""
+                isSubmitting = false
+                if let unwrappedError = error {
+                  DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                    isFieldShaking = true
+                    isTextFieldFocused = true
+                    switch unwrappedError {
+                    case .localizedText(let errorMessage):
+                      errorText = errorMessage
+                      break
+                    }
                   }
                 }
               }
@@ -104,6 +120,6 @@ struct PinCodeTextField: View {
 
 struct CodeTextField_Previews: PreviewProvider {
   static var previews: some View {
-    PinCodeTextField(label: "Enter code") {code in }
+    PinCodeTextField(label: "Enter code") {code, completion in }
   }
 }

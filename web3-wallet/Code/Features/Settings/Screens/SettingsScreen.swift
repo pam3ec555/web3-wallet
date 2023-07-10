@@ -8,13 +8,19 @@
 import SwiftUI
 
 struct SettingsScreen: View {
-    var body: some View {
-        Text("Settings")
-    }
+  @EnvironmentObject private var authVM: AuthVM
+
+  var body: some View {
+    Button(action: {
+      let _ = authVM.clear()
+    }, label: {
+      Text("LOGOUT")
+    })
+  }
 }
 
 struct SettingsScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        SettingsScreen()
-    }
+  static var previews: some View {
+    SettingsScreen()
+  }
 }

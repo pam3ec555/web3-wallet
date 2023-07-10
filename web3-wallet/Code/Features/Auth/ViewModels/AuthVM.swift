@@ -14,8 +14,11 @@ enum AuthorizationError: Error {
   case invalidPassword
 }
 
+typealias AuthorizeCompletion = (AuthorizationError?) -> Void
+
 class AuthVM: ObservableObject {
   @Published private(set) var mnemonic: String?
+  @Published private(set) var hasPassword: Bool = false
   @Published private(set) var keystore: BIP32Keystore?
   
   var hasMnemonic: Bool {
@@ -35,24 +38,56 @@ class AuthVM: ObservableObject {
   init(repository: AuthRepository) {
     self.repository = repository
     mnemonic = repository.retreiveMnemonic()
+    hasPassword = repository.hasPassword()
   }
   
-  func authorize(_ password: String) throws {
+  func setPassword(_ password: String, completion: @escaping AuthorizeCompletion) {
     guard let unwrappedMnemonic = mnemonic else {
-      throw AuthorizationError.mnemonicDoesNotExist
+      completion(AuthorizationError.mnemonicDoesNotExist)
+      return
+    }
+    let isStored = repository.setPassword(password)
+    if isStored {
+      initKeystore(password: password, mnemonic: unwrappedMnemonic, completion: { error in
+        if let unwrappedError = error {
+          completion(unwrappedError)
+        } else {
+          self.hasPassword = true
+        }
+      })
+    } else {
+      completion(AuthorizationError.unknown)
+    }
+  }
+  
+  func authorize(_ password: String, completion: @escaping AuthorizeCompletion) {
+    guard let unwrappedMnemonic = mnemonic else {
+      completion(AuthorizationError.mnemonicDoesNotExist)
+      return
     }
     let passwordIsValid = repository.validatePassword(with: password)
     if !passwordIsValid {
-      throw AuthorizationError.invalidPassword
+      completion(AuthorizationError.invalidPassword)
+      return
     }
-    do {
-      keystore = try BIP32Keystore(
-        mnemonics: unwrappedMnemonic,
-        password: password
-      )
-      print("Address = \(keystore?.addresses?.first)")
-    } catch {
-      throw AuthorizationError.unknown
+    
+    initKeystore(password: password, mnemonic: unwrappedMnemonic, completion: completion)
+  }
+  
+  private func initKeystore(password: String, mnemonic: String, completion: @escaping AuthorizeCompletion) {
+    DispatchQueue.global(qos: .userInteractive).async {
+      do {
+        let keystore = try BIP32Keystore(
+          mnemonics: mnemonic,
+          password: password
+        )
+        DispatchQueue.main.async {
+          self.keystore = keystore
+          completion(nil)
+        }
+      } catch {
+        completion(AuthorizationError.unknown)
+      }
     }
   }
   
@@ -69,10 +104,11 @@ class AuthVM: ObservableObject {
   }
   
   func clear() -> Bool {
-    let isCleared = repository.clearMnemonic()
+    let isCleared = repository.clearMnemonic() && repository.clearPassword()
     if (isCleared) {
       mnemonic = nil
       keystore = nil
+      hasPassword = false
     }
     return isCleared
   }

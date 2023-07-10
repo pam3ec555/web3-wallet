@@ -31,7 +31,6 @@ class AppConfiguration: ObservableObject {
           let configurationDict = NSDictionary(contentsOf: configurationURL) else {
       fatalError("Unable to load configuration file.")
     }
-    print(" configurationURL = \(configurationURL), configurationDict = \(configurationDict)")
     data = ConfigModel(configurationDict)
   }
 }

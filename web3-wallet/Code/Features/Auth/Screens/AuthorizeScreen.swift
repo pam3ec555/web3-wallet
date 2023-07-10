@@ -9,18 +9,25 @@ import SwiftUI
 import Combine
 
 struct AuthorizeScreen: View {
-  @StateObject private var authVM = AuthVM(repository: AuthRepositoryImpl())
+  @EnvironmentObject private var authVM: AuthVM
   
   var body: some View {
-    PinCodeTextField(label: "auth.enterPinCode", isFocused: true) { code in
-      do {
-        try authVM.authorize(code)
-      } catch AuthorizationError.mnemonicDoesNotExist {
-        throw AppError.localizedText("auth.mnemonicDoesNotExist")
-      } catch AuthorizationError.invalidPassword {
-        throw AppError.localizedText("sharedErrors.invalidPassword")
-      } catch {
-        throw AppError.localizedText("sharedErrors.somethingWentWrong")
+    PinCodeTextField(label: "auth.enterPinCode", isFocused: true) { code, completion in
+      authVM.authorize(code) { error in
+        if let unwrappedError = error {
+          switch unwrappedError {
+          case .invalidPassword:
+            completion(AppError.localizedText("sharedErrors.invalidPassword"))
+            break
+          case .mnemonicDoesNotExist:
+            completion(AppError.localizedText("auth.mnemonicDoesNotExist"))
+            break
+          default:
+            completion( AppError.localizedText("sharedErrors.somethingWentWrong"))
+          }
+        } else {
+          completion(nil)
+        }
       }
     }
   }

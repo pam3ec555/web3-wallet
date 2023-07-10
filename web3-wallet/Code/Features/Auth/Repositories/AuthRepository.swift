@@ -17,7 +17,9 @@ protocol AuthRepository {
   
   func clearMnemonic() -> Bool
   
-  func createPassword(_ password: String) -> Bool
+  func setPassword(_ password: String) -> Bool
+  
+  func hasPassword() -> Bool
   
   func validatePassword(with password: String) -> Bool
   
@@ -84,7 +86,7 @@ struct AuthRepositoryImpl: AuthRepository {
     return true
   }
   
-  func createPassword(_ password: String) -> Bool {
+  func setPassword(_ password: String) -> Bool {
     let query: [String: Any] = [
       kSecClass as String: kSecClassGenericPassword,
       kSecAttrAccount as String: kWalletPassword,
@@ -103,6 +105,20 @@ struct AuthRepositoryImpl: AuthRepository {
     }
     
     return true
+  }
+  
+  func hasPassword() -> Bool {
+    let query: [String: Any] = [
+      kSecClass as String: kSecClassGenericPassword,
+      kSecAttrAccount as String: kWalletPassword,
+      kSecMatchLimit as String: kSecMatchLimitOne,
+      kSecReturnData as String: true
+    ]
+    
+    var result: AnyObject?
+    let status = SecItemCopyMatching(query as CFDictionary, &result)
+    
+    return status == errSecSuccess
   }
   
   func validatePassword(with password: String) -> Bool {

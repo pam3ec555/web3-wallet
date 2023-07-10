@@ -36,6 +36,7 @@
 		3030E1A62A5A9031008B469E /* PinCodeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3030E1A52A5A9031008B469E /* PinCodeTextField.swift */; };
 		3030E1AA2A5ABD38008B469E /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3030E1A92A5ABD38008B469E /* AppError.swift */; };
 		3030E1AC2A5AC67C008B469E /* ShakeAnimModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3030E1AB2A5AC67C008B469E /* ShakeAnimModifier.swift */; };
+		3030E1AE2A5C1C65008B469E /* SetPasswordScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3030E1AD2A5C1C65008B469E /* SetPasswordScreen.swift */; };
 		30A74E6A2A516D6400A9FC55 /* web3_walletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A74E692A516D6400A9FC55 /* web3_walletApp.swift */; };
 		30A74E6C2A516D6400A9FC55 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A74E6B2A516D6400A9FC55 /* ContentView.swift */; };
 		30A74E6E2A516D6500A9FC55 /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30A74E6D2A516D6500A9FC55 /* AppIcon.xcassets */; };
@@ -68,6 +69,7 @@
 		3030E1A52A5A9031008B469E /* PinCodeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinCodeTextField.swift; sourceTree = "<group>"; };
 		3030E1A92A5ABD38008B469E /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		3030E1AB2A5AC67C008B469E /* ShakeAnimModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeAnimModifier.swift; sourceTree = "<group>"; };
+		3030E1AD2A5C1C65008B469E /* SetPasswordScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPasswordScreen.swift; sourceTree = "<group>"; };
 		30A74E662A516D6400A9FC55 /* web3-wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "web3-wallet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30A74E692A516D6400A9FC55 /* web3_walletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = web3_walletApp.swift; sourceTree = "<group>"; };
 		30A74E6B2A516D6400A9FC55 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				3030E1592A5679F9008B469E /* Restore */,
 				3030E1582A5679EF008B469E /* Create */,
 				3030E1372A5598B1008B469E /* IntroScreen.swift */,
+				3030E1AD2A5C1C65008B469E /* SetPasswordScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -467,6 +470,7 @@
 			files = (
 				3030E1762A59132F008B469E /* SettingsScreen.swift in Sources */,
 				3030E12B2A552E25008B469E /* AuthVM.swift in Sources */,
+				3030E1AE2A5C1C65008B469E /* SetPasswordScreen.swift in Sources */,
 				3030E1382A5598B1008B469E /* IntroScreen.swift in Sources */,
 				3030E15B2A567A6D008B469E /* RevealNewMnemonicScreen.swift in Sources */,
 				3030E1722A5912E4008B469E /* WalletScreen.swift in Sources */,

@@ -38,10 +38,11 @@
 "restoreSeed.invalidSeedPhraseFormat" = "Invalid format of seed phrase";
 
 // Auth
-"auth.createNewPinCode" = "Create new pin code";
-"auth.confirmPinCode" = "Confirm new pin code";
-"auth.enterPinCode" = "Enter pin code";
+"auth.createNewPinCode" = "Create new password";
+"auth.confirmPinCode" = "Confirm new password";
+"auth.enterPinCode" = "Enter password";
 "auth.mnemonicDoesNotExist" = "Mnemonic does not exist";
+"auth.pinCodesDoNotMatch" = "Passwords don't match. Try again";
 
 // Wallet
 "wallet.title" = "Wallet";

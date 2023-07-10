@@ -12,12 +12,16 @@ struct ContentView: View {
   @StateObject private var config = AppConfiguration()
   
   var body: some View {
-    Group {
+    return Group {
       if authVM.hasMnemonic {
         if authVM.isAuthorized {
           MainScreen()
         } else {
-          AuthorizeScreen()
+          if authVM.hasPassword {
+            AuthorizeScreen()
+          } else {
+            SetPasswordScreen()
+          }
         }
       } else {
         IntroScreen()
